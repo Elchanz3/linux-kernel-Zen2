@@ -511,6 +511,8 @@ YACC		= bison
 AWK		= awk
 INSTALLKERNEL  := installkernel
 PERL		= perl
+PYTHON		= python
+PYTHON2		= python2
 PYTHON3		= python3
 CHECK		= sparse
 BASH		= bash
@@ -521,6 +523,8 @@ LZMA		= lzma
 LZ4		= lz4c
 XZ		= xz
 ZSTD		= zstd
+ZIP             = zip
+CCACHE          = ccache
 
 PAHOLE_FLAGS	= $(shell PAHOLE=$(PAHOLE) $(srctree)/scripts/pahole-flags.sh)
 
