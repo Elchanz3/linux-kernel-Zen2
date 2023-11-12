@@ -52,6 +52,24 @@ choice
 	help
 	 1000 Hz is the preferred choice for desktop systems and other
 	 systems requiring fast interactive responses to events.
+	 
+	 config HZ_2500
+		bool "2500 HZ"
+		
+	config HZ_3000
+		bool "3000 HZ"
+		
+	config HZ_4000
+		bool "4000 HZ"
+		
+	config HZ_8000
+		bool "8000 HZ"
+		
+	config HZ_10000
+		bool "10000 HZ"
+	help
+	 Please note, this is extremely experimental
+	 and should only be selected in extremely necessary cases and should not be used by standard users..
 
 endchoice
 
@@ -62,6 +80,11 @@ config HZ
 	default 300 if HZ_300
 	default 500 if HZ_500
 	default 1000 if HZ_1000
+	default 2500 if HZ_2500
+	default 3000 if HZ_3000
+	default 4000 if HZ_4000
+	default 8000 if HZ_8000
+	default 10000 if HZ_10000
 
 config SCHED_HRTICK
 	def_bool HIGH_RES_TIMERS
